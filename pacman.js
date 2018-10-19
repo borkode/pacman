@@ -70,8 +70,6 @@ document.onkeydown = function (e) {
         case 'ArrowRight':
         movex = 1
         movey = 0
-        alert(Math.floor(pacpos[0]));
-        alert(Math.floor(pacpos[1]));
             pdir = 0
         document.getElementById('pacman').style.transform = 'rotate(0deg)'
             break;
@@ -94,3 +92,13 @@ pman.style.top = pman.getBoundingClientRect().top+pixel_size*movey+'px';
 pacpos[0]=pman.getBoundingClientRect().left/pixel_size;
 pacpos[1]=pman.getBoundingClientRect().top/pixel_size;
 },250);
+function stopMoving(){
+movex = 0
+movey = 0
+}
+
+setInterval(function(){
+  if(retEl(pacpos[0],pacpos[1])+movex*pixel_size-movey*pixel_size==1){
+       stopMoving();
+  }
+},1);
