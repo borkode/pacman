@@ -44,23 +44,23 @@ document.onkeydown = function (e) {
     switch (e.key) {
         case 'ArrowUp':
             pdir = 270
-        document.getElementById('pacman').style.transform = 'rotate(270deg);'
+        document.getElementById('pacman').style.transform = 'rotate(270deg)'
             break;
         case 'ArrowDown':
             pidir = 90
-        document.getElementById('pacman').style.transform = 'rotate(90deg);'
+        document.getElementById('pacman').style.transform = 'rotate(90deg)'
             break;
         case 'ArrowLeft':
             pdir = 180
-        document.getElementById('pacman').style.transform = 'rotate(180deg);'
+        document.getElementById('pacman').style.transform = 'rotate(180deg)'
             break;
         case 'ArrowRight':
             pdir = 0
-        document.getElementById('pacman').style.transform = 'rotate(0deg);'
+        document.getElementById('pacman').style.transform = 'rotate(0deg)'
             break;
     }
 };
 document.getElementById('pacman').setAttribute('src','pacman-move.gif');
 document.getElementById('pacman').style.width=pixel_size+'px';
 document.getElementById('pacman').style.height=pixel_size+'px';
-
+document.getElementById('pacman').style.position = 'absolute'
