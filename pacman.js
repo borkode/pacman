@@ -5,7 +5,7 @@ var ghost_colors = ['red','orange','pink','blue'];
 var pacman = 'pacman-move.gif';
 var gwid = 19;
 var ghei = 19;
-var pixel_size = 15;
+var pixel_size = 25;
 var layout = [ // 0 = empty, 1 = solid, 2 = regular pellet, 3 = mega pellet
 /*
                                      1   1   1   1   1   1   1   1   1   1
@@ -40,7 +40,6 @@ var gh1pos = [0,0];
 var gh2pos = [0,0];
 var gh3pos = [0,0];
 var gh4pos = [0,0];
-var colors = ['#000022','#000099']
 var pdir = 90;
 var wc = 0;
 var hc = 0;
@@ -73,33 +72,14 @@ document.onkeydown = function (e) {
     }
 };
 document.getElementById('pacman').setAttribute('src','http://borkode.github.io/pacman/pacman-move.gif');
-document.getElementById('pacman').style.width=pixel_size+'px';
-document.getElementById('pacman').style.height=pixel_size+'px';
+document.getElementById('pacman').style.width=pixel_size*0.75+'px';
+document.getElementById('pacman').style.height=pixel_size*0.75+'px';
 document.getElementById('pacman').style.position = 'absolute'
 // Layout generation using array "layout"
 var l = document.getElementById('layout')
 l.setAttribute('width',pixel_size*gwid);
 l.setAttribute('height',pixel_size*ghei);
-var w=0
-var x=0;
-var y=0;
-var z=0;
-for(z<ghei;z++;){
-w=0
-for(y<gwid;y++;){
-  var btn = document.createElement("BUTTON");
-    document.body.appendChild(btn);
-  var inArray = retEl(y,z);
-    btn.style.backgroundColor = 'red';
-    btn.style.border = 'none';
-    btn.style.width = pixel_size+'px';
-    btn.style.height = pixel_size+'px';
-  btn.style.left = y*pixel_size;
-  btn.style.top = w
-w=w+pixel_size;
-}
-x=x+pixel_size;
-}
+
 var pman = document.getElementById('pacman');
 setInterval(function(){
 
