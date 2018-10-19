@@ -64,3 +64,16 @@ document.getElementById('pacman').setAttribute('src','pacman-move.gif');
 document.getElementById('pacman').style.width=pixel_size+'px';
 document.getElementById('pacman').style.height=pixel_size+'px';
 document.getElementById('pacman').style.position = 'absolute'
+// Layout generation using array "layout"
+var l = document.getElementById('layout')
+var w=0
+var x=0;
+var y=0;
+var z=0;
+for(z++;z<ghei;){
+w=0
+for(y++;y<gwid;){
+w=w+pixel_size;
+}
+x=x+pixel_size;
+}
