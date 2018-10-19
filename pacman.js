@@ -55,3 +55,5 @@ document.onkeydown = function (e) {
             pdir = 0
     }
 };
+document.getElementById('pacman').setAttribute('src','pacman-move.gif');
+setInterval(function(){document.getElementById('pacman').style.transform = 'rotate('+pdir+'deg);'},1);
