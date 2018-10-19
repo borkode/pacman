@@ -43,17 +43,17 @@ var hc = 0;
 document.onkeydown = function (e) {
     switch (e.key) {
         case 'ArrowUp':
-            pdir = 270deg
+            pdir = 270
             break;
         case 'ArrowDown':
-            pidir = 90deg
+            pidir = 90
             break;
         case 'ArrowLeft':
-            pdir = 180deg
+            pdir = 180
             break;
         case 'ArrowRight':
-            pdir = 0deg
+            pdir = 0
     }
 };
 document.getElementById('pacman').setAttribute('src','pacman-move.gif');
-setInterval(function(){document.getElementById('pacman').style.transform = 'rotate('+pdir+');'},1);
+setInterval(function(){document.getElementById('pacman').style.transform = 'rotate('+num.toString(pdir)+'deg);'},1);
