@@ -70,9 +70,9 @@ var w=0
 var x=0;
 var y=0;
 var z=0;
-for(z++;z<ghei;){
+for(z<ghei;z++;){
 w=0
-for(y++;y<gwid;){
+for(y<gwid;y++;){
 w=w+pixel_size;
 }
 x=x+pixel_size;
