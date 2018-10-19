@@ -70,7 +70,8 @@ document.onkeydown = function (e) {
         case 'ArrowRight':
         movex = 1
         movey = 0
-        alert(pacpos[0],pacpos[1]);
+        alert(pacpos[0]);
+        alert(pacpos[1]);
             pdir = 0
         document.getElementById('pacman').style.transform = 'rotate(0deg)'
             break;
