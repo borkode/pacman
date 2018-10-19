@@ -37,22 +37,23 @@ var gh3pos = [0,0];
 var gh4pos = [0,0];
 var blank = '#000022';
 var solid = '#000099';
-var pdir = 0;
+var pdir = 90;
 var wc = 0;
 var hc = 0;
 document.onkeydown = function (e) {
     switch (e.key) {
-        case 'w':
+        case 'ArrowUp':
             pdir = 270
             break;
-        case 's':
+        case 'ArrowDown':
             pidir = 90
             break;
-        case 'a':
+        case 'ArrowLeft':
             pdir = 180
             break;
-        case 'd':
+        case 'ArrowRight':
             pdir = 0
+            break;
     }
 };
 document.getElementById('pacman').setAttribute('src','pacman-move.gif');
