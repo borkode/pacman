@@ -72,8 +72,8 @@ document.onkeydown = function (e) {
     }
 };
 document.getElementById('pacman').setAttribute('src','http://borkode.github.io/pacman/pacman-move.gif');
-document.getElementById('pacman').style.width=pixel_size*0.75+'px';
-document.getElementById('pacman').style.height=pixel_size*0.75+'px';
+document.getElementById('pacman').style.width=pixel_size+'px';
+document.getElementById('pacman').style.height=pixel_size+'px';
 document.getElementById('pacman').style.position = 'absolute'
 // Layout generation using array "layout"
 var l = document.getElementById('layout')
