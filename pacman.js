@@ -40,3 +40,13 @@ var solid = '#000099';
 var pdir = 0;
 var wc = 0;
 var hc = 0;
+  function keydown(e){
+    var keynum;
+    if(window.event) { // IE                    
+      keynum = e.keyCode;
+    } else if(e.which){ // Netscape/Firefox/Opera                   
+      keynum = e.which;
+    }
+    var x = String.fromCharCode(keynum)
+    alert(x);
+  }
