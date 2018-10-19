@@ -5,7 +5,7 @@ var ghost_colors = ['red','orange','pink','blue'];
 var pacman = 'pacman-move.gif';
 var gwid = 19;
 var ghei = 19;
-var pixel_size = 5;
+var pixel_size = 25;
 var layout = [ // 0 = empty, 1 = solid, 2 = regular pellet, 3 = mega pellet
 /*
                                      1   1   1   1   1   1   1   1   1   1
