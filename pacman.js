@@ -33,6 +33,8 @@ var layout = [ // 0 = empty, 1 = solid, 2 = regular pellet, 3 = mega pellet
 function retEl(x,y){
 return layout[y*ghei+x];
 }
+var movex = 1;
+var movey = 0;
 var pacpos = [0,0];
 var gh1pos = [0,0];
 var gh2pos = [0,0];
@@ -46,23 +48,31 @@ document.onkeydown = function (e) {
     switch (e.key) {
         case 'ArrowUp':
             pdir = 270
+            movex = 0
+        movey = -1
         document.getElementById('pacman').style.transform = 'rotate(270deg)'
             break;
         case 'ArrowDown':
+        movex = 0
+        movey = 1
             pidir = 90
         document.getElementById('pacman').style.transform = 'rotate(90deg)'
             break;
         case 'ArrowLeft':
+        movex = -1
+        movey = 0
             pdir = 180
         document.getElementById('pacman').style.transform = 'rotate(180deg)'
             break;
         case 'ArrowRight':
+        movex = 1
+        movey = 0
             pdir = 0
         document.getElementById('pacman').style.transform = 'rotate(0deg)'
             break;
     }
 };
-document.getElementById('pacman').setAttribute('src','pacman-move.gif');
+document.getElementById('pacman').setAttribute('src','http://borkode.github.io/pacman/pacman-move.gif');
 document.getElementById('pacman').style.width=pixel_size+'px';
 document.getElementById('pacman').style.height=pixel_size+'px';
 document.getElementById('pacman').style.position = 'absolute'
@@ -78,7 +88,7 @@ for(y<gwid;y++;){
   var btn = document.createElement("BUTTON");
     document.body.appendChild(btn);
   var inArray = retEl(y,z);
-    btn.style.backgroundColor = colors[inArray];
+    btn.style.backgroundColor = 'red';
     btn.style.border = 'none';
     btn.style.width = pixel_size+'px';
     btn.style.height = pixel_size+'px';
@@ -88,3 +98,11 @@ w=w+pixel_size;
 }
 x=x+pixel_size;
 }
+var pman = document.getElementById('pacman');
+setInterval(function(){
+
+pman.style.left = pman.getBoundingClientRect().left+pixel_size*movex+'px';
+pman.style.top = pman.getBoundingClientRect().top+pixel_size*movey+'px';
+pacpos[0]=pman.style.left
+pacpos[1]=pman.style.top
+},250);
