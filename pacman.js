@@ -47,6 +47,6 @@ var hc = 0;
     } else if(e.which){ // Netscape/Firefox/Opera                   
       keynum = e.which;
     }
-    var x = String.fromCharCode(keynum)
+    var x = keynum
     alert(x);
   }
