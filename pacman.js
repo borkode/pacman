@@ -40,13 +40,18 @@ var solid = '#000099';
 var pdir = 0;
 var wc = 0;
 var hc = 0;
-  function keydown(e){
-    var keynum;
-    if(window.event) { // IE                    
-      keynum = e.keyCode;
-    } else if(e.which){ // Netscape/Firefox/Opera                   
-      keynum = e.which;
+document.onkeydown = function (e) {
+    switch (e.key) {
+        case 'ArrowUp':
+            pdir = 270
+            break;
+        case 'ArrowDown':
+            pidir = 90
+            break;
+        case 'ArrowLeft':
+            pdir = 180
+            break;
+        case 'ArrowRight':
+            pdir = 0
     }
-    var x = keynum
-    alert(x);
-  }
+};
