@@ -45,24 +45,28 @@ var wc = 0;
 var hc = 0;
 document.onkeydown = function (e) {
     switch (e.key) {
+      case 'W':
         case 'ArrowUp':
             pdir = 270
             movex = 0
         movey = -1
         document.getElementById('pacman').style.transform = 'rotate(270deg)'
             break;
+        case 'S':
         case 'ArrowDown':
         movex = 0
         movey = 1
             pidir = 90
         document.getElementById('pacman').style.transform = 'rotate(90deg)'
             break;
+        case 'A':
         case 'ArrowLeft':
         movex = -1
         movey = 0
             pdir = 180
         document.getElementById('pacman').style.transform = 'rotate(180deg)'
             break;
+        case 'D':
         case 'ArrowRight':
         movex = 1
         movey = 0
