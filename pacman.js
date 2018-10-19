@@ -56,4 +56,4 @@ document.onkeydown = function (e) {
     }
 };
 document.getElementById('pacman').setAttribute('src','pacman-move.gif');
-setInterval(function(){document.getElementById('pacman').style.transform = 'rotate('+num.toString(pdir)+'deg);'},1);
+setInterval(function(){document.getElementById('pacman').style.transform = 'rotate('+pdir.toString()+'deg);'},1);
