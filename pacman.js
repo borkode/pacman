@@ -5,7 +5,10 @@ var ghost_colors = ['red','orange','pink','blue'];
 var pacman = 'pacman-move.gif';
 var gwid = 19;
 var ghei = 19;
-var layout = [ // 0 = empty, 1 = solid, 2 = regular pellet, 3 = mega pellet, 4 = ghost
+var layout = [ // 0 = empty, 1 = solid, 2 = regular pellet, 3 = mega pellet
+/*
+                                     1   1   1   1   1   1   1   1   1   1
+ 1   2   3   4   5   6   7   8   9   0   1   2   3   4   5   6   7   8   9*/
 '1','1','1','1','1','1','1','1','1','1','1','1','1','1','1','1','1','1','1', //1
 '1','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','1', //2
 '1','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','1', //3
@@ -25,4 +28,12 @@ var layout = [ // 0 = empty, 1 = solid, 2 = regular pellet, 3 = mega pellet, 4 =
 '1','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','1', //17
 '1','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','1', //18
 '1','1','1','1','1','1','1','1','1','1','1','1','1','1','1','1','1','1','1'  //19
-] // Right now, its a blank cavas with padding at the edges. Reminder: Add in objects, ghosts, etc.
+] // Right now, its a blank cavas with padding at the edges. Reminder: Add in solid surfaces
+var pacpos = [0,0];
+var gh1pos = [0,0];
+var gh2pos = [0,0];
+var gh3pos = [0,0];
+var gh4pos = [0,0];
+var blank = '#000022';
+var solid = '#000099';
+var pdir = 0
