@@ -29,7 +29,10 @@ var layout = [ // 0 = empty, 1 = solid, 2 = regular pellet, 3 = mega pellet
 '1','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','1', //17
 '1','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','1', //18
 '1','1','1','1','1','1','1','1','1','1','1','1','1','1','1','1','1','1','1'  //19
-] // Right now, its a blank cavas with padding at the edges. Reminder: Add in solid surfaces
+] // Right now, its a blank cavas with padding at the edges. Reminder: Add in solid surfaces & actually script hitboxes & generation of the layout.
+function retEl(x,y){
+return layout[y*ghei+x];
+}
 var pacpos = [0,0];
 var gh1pos = [0,0];
 var gh2pos = [0,0];
