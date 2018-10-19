@@ -78,6 +78,8 @@ document.getElementById('pacman').style.height=pixel_size+'px';
 document.getElementById('pacman').style.position = 'absolute'
 // Layout generation using array "layout"
 var l = document.getElementById('layout')
+l.setAttribute('width',pixel_size*gwid);
+l.setAttribute('height',pixel_size*ghei);
 var w=0
 var x=0;
 var y=0;
