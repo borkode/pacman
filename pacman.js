@@ -42,16 +42,16 @@ var wc = 0;
 var hc = 0;
 document.onkeydown = function (e) {
     switch (e.key) {
-        case 'ArrowUp':
+        case 'w':
             pdir = 270
             break;
-        case 'ArrowDown':
+        case 's':
             pidir = 90
             break;
-        case 'ArrowLeft':
+        case 'a':
             pdir = 180
             break;
-        case 'ArrowRight':
+        case 'd':
             pdir = 0
     }
 };
