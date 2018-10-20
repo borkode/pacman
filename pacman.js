@@ -98,7 +98,7 @@ movey = 0
 }
 
 setInterval(function(){
-  if(retEl(pacpos[0]-1,pacpos[1]-1)==1){
+  if(retEl(pacpos[0],pacpos[1])==1){
        stopMoving();
   }
 },1);
