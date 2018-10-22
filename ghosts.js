@@ -42,3 +42,12 @@ ghosts_el[0].setAttribute('src', ghosts_left[0]);
 ghosts_el[1].setAttribute('src', ghosts_left[1]);
 ghosts_el[2].setAttribute('src', ghosts_left[2]);
 ghosts_el[3].setAttribute('src', ghosts_left[3]);
+
+ghosts_el[0].setAttribute('width', pixel_size);
+ghosts_el[0].setAttribute('height', pixel_size);
+ghosts_el[1].setAttribute('width', pixel_size);
+ghosts_el[1].setAttribute('height', pixel_size);
+ghosts_el[2].setAttribute('width', pixel_size);
+ghosts_el[2].setAttribute('height', pixel_size);
+ghosts_el[3].setAttribute('width', pixel_size);
+ghosts_el[3].setAttribute('height', pixel_size);
