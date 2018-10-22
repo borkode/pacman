@@ -31,7 +31,7 @@ var layout = [ // 0 = empty, 1 = solid, 2 = regular pellet, 3 = mega pellet
 '1','1','1','1','1','1','1','1','1','1','1','1','1','1','1','1','1','1','1'  //19
 ] // Right now, its a blank cavas with padding at the edges. Reminder: Add in solid surfaces & actually script hitboxes & generation of the layout.
 function retEl(x,y){
-return layout[y*ghei+x];
+return y*ghei+x;
 }
 var movex = 1;
 var movey = 0;
@@ -89,10 +89,15 @@ setInterval(function(){
 
 pman.style.left = pman.getBoundingClientRect().left+pixel_size*movex+'px';
 pman.style.top = pman.getBoundingClientRect().top+pixel_size*movey+'px';
-pacpos[0]=Math.floor(pman.getBoundingClientRect().left/pixel_size);
-pacpos[1]=Math.floor(pman.getBoundingClientRect().top/pixel_size);
+pacpos[0]=pman.getBoundingClientRect().left/pixel_size;
+pacpos[1]=pman.getBoundingClientRect().top/pixel_size;
 },250);
 function stopMoving(){
 movex = 0
 movey = 0
 }
+
+// Hitbox detection
+setInterval(function(){
+  // code this later
+},1);
