@@ -96,8 +96,3 @@ function stopMoving(){
 movex = 0
 movey = 0
 }
-
-// Hitbox detection
-setInterval(function(){
-  // code this later
-},1);
