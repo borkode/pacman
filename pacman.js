@@ -91,10 +91,14 @@ l.setAttribute('width',pixel_size*gwid);
 l.setAttribute('height',pixel_size*ghei);
 
 function move(){
+  if(layout[retEl(pacpos[0]+movex,pacpos[1]-movey)]!=1){
   pman.style.left = pman.getBoundingClientRect().left+pixel_size*movex+'px';
 pman.style.top = pman.getBoundingClientRect().top+pixel_size*movey+'px';
 pacpos[0]=Math.floor(pman.getBoundingClientRect().left/pixel_size);
 pacpos[1]=Math.floor(pman.getBoundingClientRect().top/pixel_size);
+  }else{
+    stopMoving();
+  }
 }
 
 setInterval(function(){
@@ -105,13 +109,3 @@ movex = 0
 movey = 0
 return true
 }
-
-
-setInterval(function(){
-  if(layout[retEl(pacpos[0],pacpos[1])]==1){
-movex=movex*-1
-movey=movey*-1
-move();
-stopMoving();
-  }
-},1);
