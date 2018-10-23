@@ -91,7 +91,7 @@ l.setAttribute('width',pixel_size*gwid);
 l.setAttribute('height',pixel_size*ghei);
 
 function move(){
-  if(layout[retEl(pacpos[0]+movex,pacpos[1]-movey)]!=1){
+  if(layout[retEl(pacpos[0]+movex,pacpos[1]+movey)]!=1){
   pman.style.left = pman.getBoundingClientRect().left+pixel_size*movex+'px';
 pman.style.top = pman.getBoundingClientRect().top+pixel_size*movey+'px';
 pacpos[0]=Math.floor(pman.getBoundingClientRect().left/pixel_size);
