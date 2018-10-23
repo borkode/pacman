@@ -6,6 +6,7 @@ var pacman = 'pacman-move.gif';
 var gwid = 19;
 var ghei = 19;
 var pixel_size = 25;
+var pman = document.getElementById('pacman');
 var layout = [ // 0 = empty, 1 = solid, 2 = regular pellet, 3 = mega pellet
 /*
                                      1   1   1   1   1   1   1   1   1   1
@@ -89,7 +90,6 @@ var l = document.getElementById('layout')
 l.setAttribute('width',pixel_size*gwid);
 l.setAttribute('height',pixel_size*ghei);
 
-var pman = document.getElementById('pacman');
 setInterval(function(){
 
 pman.style.left = pman.getBoundingClientRect().left+pixel_size*movex+'px';
