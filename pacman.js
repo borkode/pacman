@@ -36,9 +36,9 @@ return y*ghei+x;
 }
 var movex = 0;
 var movey = 0;
-var pacpos = [25,25];
-pman.style.left = pman.getBoundingClientRect().left+pixel_size*movex+'px';
-pman.style.top = pman.getBoundingClientRect().top+pixel_size*movey+'px';
+var pacpos = [0,0];
+pman.style.left = pixel_size+'px';
+pman.style.top = pixel_size+'px';
 var gh1pos = [0,0];
 var gh2pos = [0,0];
 var gh3pos = [0,0];
