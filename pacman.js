@@ -98,7 +98,7 @@ pacpos[1]=Math.floor(pman.getBoundingClientRect().top/pixel_size);
 function stopMoving(){
 movex = 0
 movey = 0
-return "Stopped Pacman from moving."
+return true
 }
 
 
