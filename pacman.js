@@ -35,7 +35,7 @@ return y*ghei+x;
 }
 var movex = 1;
 var movey = 0;
-var pacpos = [0,0];
+var pacpos = [760,0];
 var gh1pos = [0,0];
 var gh2pos = [0,0];
 var gh3pos = [0,0];
