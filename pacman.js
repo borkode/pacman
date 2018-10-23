@@ -30,11 +30,13 @@ var layout = [ // 0 = empty, 1 = solid, 2 = regular pellet, 3 = mega pellet
 '1','0','1','1','0','1','1','1','0','1','0','1','1','1','0','1','1','0','1', //17
 '1','0','0','0','0','0','0','0','0','1','0','0','0','0','0','0','0','0','1', //18
 '1','1','1','1','1','1','1','1','1','1','1','1','1','1','1','1','1','1','1'  //19
+  
 ] // Right now, its a blank cavas with padding at the edges. Reminder: Add in solid surfaces & actually script hitboxes & generation of the layout.
 function retEl(x,y){
 return y*ghei+x;
 }
-var movex = 1;
+document.getElementById('pacman').style.transform = 'rotate(270deg)'
+var movex = 0;
 var movey = 0;
 var pacpos = [9,15];
 pman.style.left = pixel_size*9+8+'px';
