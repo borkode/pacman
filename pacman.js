@@ -87,7 +87,7 @@ l.setAttribute('height',pixel_size*ghei);
 var pman = document.getElementById('pacman');
 setInterval(function(){
 
-pman.style.left = pman.getBoundingClientRect().left+pixel_size*movex+'px';
+pman.style.left = pman.getBoundingClientRect().left+pixel_size*movex-4+'px';
 pman.style.top = pman.getBoundingClientRect().top+pixel_size*movey+'px';
 pacpos[0]=pman.getBoundingClientRect().left/pixel_size;
 pacpos[1]=pman.getBoundingClientRect().top/pixel_size;
