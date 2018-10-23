@@ -113,7 +113,7 @@ pman.style.left = pman.getBoundingClientRect().left+pixel_size*movex+'px';
 pman.style.top = pman.getBoundingClientRect().top+pixel_size*movey+'px';
 pacpos[0]=Math.floor(pman.getBoundingClientRect().left/pixel_size);
 pacpos[1]=Math.floor(pman.getBoundingClientRect().top/pixel_size);
-movex=movex*-1
-movey=movey*-1
+movex=0
+movey=0
   }
 },1);
