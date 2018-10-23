@@ -73,6 +73,9 @@ document.onkeydown = function (e) {
             pdir = 0
         document.getElementById('pacman').style.transform = 'rotate(0deg)'
             break;
+      case 'shiftKey':
+        stopMoving();
+        break;
     }
 };
 document.getElementById('pacman').setAttribute('src','http://borkode.github.io/pacman/pacman-move.gif');
