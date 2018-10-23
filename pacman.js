@@ -105,8 +105,9 @@ return true
 setInterval(function(){
   if(layout[retEl(pacpos[0],pacpos[1])]==1){
 stopMoving();
-    
 pman.style.left = pman.getBoundingClientRect().left+pixel_size*movex*-1+'px';
 pman.style.top = pman.getBoundingClientRect().top+pixel_size*movey*-1+'px';
+pacpos[0]=Math.floor(pman.getBoundingClientRect().left/pixel_size);
+pacpos[1]=Math.floor(pman.getBoundingClientRect().top/pixel_size);
   }
 },1);
