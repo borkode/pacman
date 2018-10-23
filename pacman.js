@@ -36,7 +36,7 @@ return y*ghei+x;
 }
 var movex = 1;
 var movey = 0;
-var pacpos = [0,0];
+var pacpos = [1,1];
 pman.style.left = pixel_size+8+'px';
 pman.style.top = pixel_size+8+'px';
 var gh1pos = [0,0];
