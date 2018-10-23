@@ -34,7 +34,7 @@ var layout = [ // 0 = empty, 1 = solid, 2 = regular pellet, 3 = mega pellet
 function retEl(x,y){
 return y*ghei+x;
 }
-var movex = 0;
+var movex = 1;
 var movey = 0;
 var pacpos = [0,0];
 pman.style.left = pixel_size+8+'px';
