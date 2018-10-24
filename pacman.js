@@ -111,6 +111,7 @@ move(1);
 function stopMoving(){
 x = 0
 movey = 0
+audio.currentTime = 0;
 audio.pause();
 return true
 }
