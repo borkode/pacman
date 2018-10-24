@@ -36,6 +36,7 @@ function retEl(x,y){
 return y*ghei+x;
 }
 document.getElementById('pacman').style.transform = 'rotate(270deg)'
+var audio = document.getElementById('movesfx')
 var movex = 0;
 var movey = 0;
 var pacpos = [9,15];
@@ -98,6 +99,7 @@ function move(m){
 pman.style.top = pman.getBoundingClientRect().top+pixel_size*movey*m+'px';
 pacpos[0]=Math.floor(pman.getBoundingClientRect().left/pixel_size);
 pacpos[1]=Math.floor(pman.getBoundingClientRect().top/pixel_size);
+audio.play();
   }else{
     stopMoving();
   }
@@ -109,5 +111,6 @@ move(1);
 function stopMoving(){
 x = 0
 movey = 0
+audio.pause();
 return true
 }
