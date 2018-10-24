@@ -81,7 +81,7 @@ document.onkeydown = function (e) {
             break;
     }
 };
-audio.volume = '0.5'
+audio.volume = '0.2'
 document.getElementById('pacman').setAttribute('src','http://borkode.github.io/pacman/pacman-move.gif');
 document.getElementById('pacman').style.width=pixel_size+'px';
 document.getElementById('pacman').style.height=pixel_size+'px';
