@@ -92,10 +92,10 @@ var l = document.getElementById('layout')
 l.setAttribute('width',pixel_size*gwid);
 l.setAttribute('height',pixel_size*ghei);
 
-function move(){
+function move(m){
   if(layout[retEl(pacpos[0]+movex,pacpos[1]+movey)]!=1){
-  pman.style.left = pman.getBoundingClientRect().left+pixel_size*movex+'px';
-pman.style.top = pman.getBoundingClientRect().top+pixel_size*movey+'px';
+  pman.style.left = pman.getBoundingClientRect().left+pixel_size*movex*m+'px';
+pman.style.top = pman.getBoundingClientRect().top+pixel_size*movey*m+'px';
 pacpos[0]=Math.floor(pman.getBoundingClientRect().left/pixel_size);
 pacpos[1]=Math.floor(pman.getBoundingClientRect().top/pixel_size);
   }else{
@@ -104,10 +104,10 @@ pacpos[1]=Math.floor(pman.getBoundingClientRect().top/pixel_size);
 }
 
 setInterval(function(){
-move();
-},250);
+move(0.5);
+},125);
 function stopMoving(){
-movex = 0
+x = 0
 movey = 0
 return true
 }
