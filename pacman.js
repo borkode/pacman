@@ -111,3 +111,13 @@ x = 0
 movey = 0
 return true
 }
+
+
+// Pellet time
+
+var remPellets = [
+/*
+                                     1   1   1   1   1   1   1   1   1   1
+ 1   2   3   4   5   6   7   8   9   0   1   2   3   4   5   6   7   8   9*/
+
+]
