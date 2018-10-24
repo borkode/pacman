@@ -101,6 +101,7 @@ pacpos[0]=Math.floor(pman.getBoundingClientRect().left/pixel_size);
 pacpos[1]=Math.floor(pman.getBoundingClientRect().top/pixel_size);
 audio.play();
   }else{
+    audio.pause();
     stopMoving();
   }
 }
