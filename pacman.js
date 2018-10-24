@@ -101,11 +101,6 @@ pacpos[1]=Math.floor(pman.getBoundingClientRect().top/pixel_size);
   }else{
     stopMoving();
   }
-  if(pacpos[0] == 0 && pacpos[1] == 9 && pdir == 180){
-pman.style.left = '458px';
-  pacpos[0] = 18;
-  pacpos[1] = 9;
-  }
 }
 
 setInterval(function(){
