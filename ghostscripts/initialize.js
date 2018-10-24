@@ -5,7 +5,7 @@ document.getElementById('orangeghost'),
 document.getElementById('pinkghost'),
 document.getElementById('blueghost')
 ]
-
+var pixel_size = 25;
 ghosts_el[0].setAttribute('width', pixel_size);
 ghosts_el[0].setAttribute('height', pixel_size);
 ghosts_el[1].setAttribute('width', pixel_size);
