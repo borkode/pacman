@@ -139,3 +139,8 @@ var basePellets = [ // 0 = empty, 1 = pellet, 2 = mega pellet
 '0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0', // 18
 '0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0', // 19
 ]
+var pellets = 1;
+var pelcount = document.getElementById('pellets');
+setInterval(function(){
+pelcount.innerHTML=pellets
+},1);
