@@ -99,6 +99,7 @@ function move(m){
 pman.style.top = pman.getBoundingClientRect().top+pixel_size*movey*m+'px';
 pacpos[0]=Math.floor(pman.getBoundingClientRect().left/pixel_size);
 pacpos[1]=Math.floor(pman.getBoundingClientRect().top/pixel_size);
+audio.currentTime = 0;
 audio.play();
   }else{
     stopMoving();
@@ -111,7 +112,6 @@ move(1);
 function stopMoving(){
 x = 0
 movey = 0
-audio.currentTime = 0;
 audio.pause();
 return true
 }
