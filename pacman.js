@@ -149,7 +149,7 @@ pelcount.innerHTML=pellets*10
 setInterval(function(){
   if(curPellets[retEl(pacpos[0],pacpos[1])]==1){
    pellets++
-    curPellets[retEl(pacpos[0],pacpos[1])]] = 0;
+    curPellets[retEl(pacpos[0],pacpos[1])] = 0;
   }
 },1);
 
