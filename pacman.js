@@ -50,6 +50,7 @@ var pdir = 90;
 var wc = 0;
 var hc = 0;
 document.onkeydown = function (e) {
+  audio.play();
     switch (e.key) {
       case 'w':
         case 'ArrowUp':
@@ -79,7 +80,6 @@ document.onkeydown = function (e) {
             pdir = 0
         document.getElementById('pacman').style.transform = 'rotate(0deg)'
             break;
-        audio.play();
     }
 };
 document.getElementById('pacman').setAttribute('src','http://borkode.github.io/pacman/pacman-move.gif');
