@@ -79,9 +79,7 @@ document.onkeydown = function (e) {
             pdir = 0
         document.getElementById('pacman').style.transform = 'rotate(0deg)'
             break;
-      case 'shiftKey':
-        stopMoving();
-        break;
+        audio.play();
     }
 };
 document.getElementById('pacman').setAttribute('src','http://borkode.github.io/pacman/pacman-move.gif');
@@ -99,9 +97,7 @@ function move(m){
 pman.style.top = pman.getBoundingClientRect().top+pixel_size*movey*m+'px';
 pacpos[0]=Math.floor(pman.getBoundingClientRect().left/pixel_size);
 pacpos[1]=Math.floor(pman.getBoundingClientRect().top/pixel_size);
-audio.play();
   }else{
-    audio.pause();
     stopMoving();
   }
 }
@@ -112,6 +108,5 @@ move(1);
 function stopMoving(){
 x = 0
 movey = 0
-audio.pause();
 return true
 }
