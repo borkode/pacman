@@ -50,7 +50,6 @@ var pdir = 90;
 var wc = 0;
 var hc = 0;
 document.onkeydown = function (e) {
-  audio.play();
     switch (e.key) {
       case 'w':
         case 'ArrowUp':
@@ -92,6 +91,7 @@ l.setAttribute('width',pixel_size*gwid);
 l.setAttribute('height',pixel_size*ghei);
 
 function move(m){
+  audio.play();
   if(layout[retEl(pacpos[0]+movex,pacpos[1]+movey)]!=1){
   pman.style.left = pman.getBoundingClientRect().left+pixel_size*movex*m+'px';
 pman.style.top = pman.getBoundingClientRect().top+pixel_size*movey*m+'px';
