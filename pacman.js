@@ -104,8 +104,8 @@ pacpos[1]=Math.floor(pman.getBoundingClientRect().top/pixel_size);
 }
 
 setInterval(function(){
-move(0.5);
-},125);
+move(1);
+},250);
 function stopMoving(){
 x = 0
 movey = 0
