@@ -81,6 +81,7 @@ document.onkeydown = function (e) {
             break;
     }
 };
+audio.volume = '0.5'
 document.getElementById('pacman').setAttribute('src','http://borkode.github.io/pacman/pacman-move.gif');
 document.getElementById('pacman').style.width=pixel_size+'px';
 document.getElementById('pacman').style.height=pixel_size+'px';
@@ -93,8 +94,8 @@ l.setAttribute('height',pixel_size*ghei);
 function move(m){
   audio.play();
   if(layout[retEl(pacpos[0]+movex,pacpos[1]+movey)]!=1){
-  pman.style.left = pman.getBoundingClientRect().left+pixel_size*movex*m+'px';
-pman.style.top = pman.getBoundingClientRect().top+pixel_size*movey*m+'px';
+pman.style.left = pman.getBoundingClientRect().left+pixel_size*movex*m+'px';
+pman.style.top = pman.getBoundingClientRect().top +pixel_size*movey*m+'px';
 pacpos[0]=Math.floor(pman.getBoundingClientRect().left/pixel_size);
 pacpos[1]=Math.floor(pman.getBoundingClientRect().top/pixel_size);
   }else{
