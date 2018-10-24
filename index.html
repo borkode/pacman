@@ -4,7 +4,9 @@
     <link rel='icon' href='pacman-icon.png'>
   </head>
   <body>
-    <div id='g'><img src='pacman-layout.png' id='layout' style="left:8px;top:8px;position:absolute;z-index:-1;">
+    <div id='g'>
+      <audio id="movesfx"><source src="move-sfx.wav" loop></audio>
+      <img src='pacman-layout.png' id='layout' style="left:8px;top:8px;position:absolute;z-index:-1;">
       <img id='pacman' draggable=false>
       <img id='redghost' draggable=false>
       <script src='ghostscripts/red.js'></script>
