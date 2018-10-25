@@ -35,7 +35,7 @@ var layout = [ // 0 = empty, 1 = solid
 function retEl(x,y){
 return y*ghei+x;
 }
-functoin retXY(elid){
+function retXY(elid){
   var pos=[]
   pos.push(Math.floor(elid/ghei))
   pos.push(elid%pos[0])
