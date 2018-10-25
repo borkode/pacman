@@ -165,7 +165,8 @@ setInterval(function(){
 var x = 0;
 while(x<basePellets.length){
   if(basePellets[x]=='1'){
-  var itm = document.getElementById('pellet'+x.toString());
+    var pid = 'pellet'+x.toString()
+  var itm = document.getElementById(pid);
   var cln = itm.cloneNode();
     document.getElementById("pelletimgs").appendChild(cln);
   cln.setAttribute('id','pellet'+(x+1).toString())
