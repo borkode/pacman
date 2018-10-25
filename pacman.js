@@ -165,10 +165,12 @@ setInterval(function(){
 
 var x = 0;
 while(x<basePellets.length){
+  if(basePellets[x]=='1'){
   pelletEl.push(document.getElementById('pellet'+(x+1).toString()))
   var newe = pelletEl[pelletEl.length-1]
   newe.style.left = retXY(x)[0]
   newe.style.top  = retXY(x)[1]
+}
   x += 1
 }
 // I have resorted to hard-coding the pellets, since .cloneNode() doesn't seem to work on <img> tags.
