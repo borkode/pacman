@@ -165,8 +165,7 @@ setInterval(function(){
 var x = 0;
 while(x<basePellets.length){
   if(basePellets[x]=='1'){
-  var itm = document.getElementsByTagName('img')[6+x]
-  var cln = itm.cloneNode();
+  var cln = document.getElementsByTagName('img')[6+x].cloneNode();
     document.getElementById("pelletimgs").appendChild(cln);
  pelletEl.push(cln)
     cln.style.position='absolute';
