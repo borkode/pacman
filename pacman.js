@@ -161,5 +161,6 @@ while(x<basePellets.length){
   var itm = document.getElementById('pellet'+x.toString());
   var cln = itm.cloneNode(true);
     document.getElementById("pelletimgs").appendChild(cln);
+  cln.setAttribute('id','pellet'+(x+1).toString())
  pelletEl.push(document.getElementById('pellet'+(x+1).toString())) 
 }
