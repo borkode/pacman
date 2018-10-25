@@ -162,15 +162,4 @@ setInterval(function(){
     curPellets[retEl(pacpos[0],pacpos[1])] = '0';
   }
 },1);
-var x = 0;
-while(x<basePellets.length){
-  if(basePellets[x]=='1'){
-  var cln = document.getElementById('pelletimgs').firstChild.cloneNode();
-    var cl = document.getElementById("pelletimgs").appendChild(cln);
- pelletEl.push(cl)
-    cl.style.position='absolute';
-    cl.style.left=retXY(x)[0];
-    cl.style.top=retXY(x)[1];
-  }
-  x += 1
-}
+// I have resorted to hard-coding the pellets, since .cloneNode() doesn't seem to work on <img> tags.
