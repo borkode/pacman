@@ -147,6 +147,7 @@ pelcount.innerHTML=pellets*10
 },1);
 document.getElementById('pelletimgs').style.width=pixel_size+'px';
 document.getElementById('pelletimgs').style.height=pixel_size+'px';
+var basepel= document.getElementById('pellet1');
 var pelletEl = [];
 // Okay, so what I want to do is basically replicate the hitbox function but instead of stopping the user, it adds 1 to the pellets variable
 setInterval(function(){
@@ -155,4 +156,10 @@ setInterval(function(){
     curPellets[retEl(pacpos[0],pacpos[1])] = '0';
   }
 },1);
-
+var x = 0;
+while(x<basePellets.length;){
+  var itm = document.getElementById('pellet'+x.toString());
+  var cln = itm.cloneNode(true);
+    document.getElementById("pelletimgs").appendChild(cln);
+ pelletEl.push(document.getElementById('pellet'+(x+1).toString())) 
+}
