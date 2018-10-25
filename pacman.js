@@ -35,6 +35,12 @@ var layout = [ // 0 = empty, 1 = solid
 function retEl(x,y){
 return y*ghei+x;
 }
+functoin retXY(elid){
+  var pos=[]
+  pos.push(Math.floor(elid/ghei))
+  pos.push(elid%pos[0])
+return pos
+}
 document.getElementById('pacman').style.transform = 'rotate(270deg)'
 var audio = document.getElementById('movesfx')
 var movex = 0;
@@ -160,10 +166,13 @@ var x = 0;
 while(x<basePellets.length){
   if(basePellets[x]=='1'){
   var itm = document.getElementById('pellet'+x.toString());
-  var cln = itm.cloneNode(true);
+  var cln = itm.cloneNode();
     document.getElementById("pelletimgs").appendChild(cln);
   cln.setAttribute('id','pellet'+(x+1).toString())
- pelletEl.push(cln) 
+ pelletEl.push(cln)
+    cln.style.position='absolute';
+    cln.style.left=retXY(x)[0];
+    cln.style.top=retXY(x)[1];
   }
   x += 1
 }
