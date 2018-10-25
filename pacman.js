@@ -165,11 +165,9 @@ setInterval(function(){
 var x = 0;
 while(x<basePellets.length){
   if(basePellets[x]=='1'){
-    var pid = 'pellet'+x.toString()
-  var itm = document.getElementById(pid);
+  var itm = document.getElementsByTagName('img')[6+x]
   var cln = itm.cloneNode();
     document.getElementById("pelletimgs").appendChild(cln);
-  cln.setAttribute('id','pellet'+(x+1).toString())
  pelletEl.push(cln)
     cln.style.position='absolute';
     cln.style.left=retXY(x)[0];
