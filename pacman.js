@@ -36,11 +36,10 @@ function retEl(x,y){
 return y*ghei+x;
 }
 function retXY(elid){
-  var pos=[]
-  pos.push(Math.floor(elid/ghei))
-  pos.push(elid%pos[0])
+  var pos=[Math.floor(elid/ghei),elid%ghei]
 return pos
 }
+
 document.getElementById('pacman').style.transform = 'rotate(270deg)'
 var audio = document.getElementById('movesfx')
 var movex = 0;
