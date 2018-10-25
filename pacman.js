@@ -168,7 +168,7 @@ while(x<basePellets.length){
   if(basePellets[Number(x)]=='1'){
   pelletEl.push(document.getElementById('pellet'+(Number(x)+1).toString()))
   var newe = pelletEl[pelletEl.length-1]
-  newe.style.left = retXY(x)[0]*pixel_size+8+'px';
+  newe.style.left = retXY(x)[0]*2*pixel_size+8+'px';
   newe.style.top  = retXY(x)[1]*pixel_size+8+'px';
 }
   x += 1
