@@ -48,6 +48,7 @@ var movey = 0;
 var pacpos = [9,15];
 pman.style.left = pixel_size*9+8+'px';
 pman.style.top = pixel_size*15+8+'px';
+pman.style.zIndex='5';
 var gh1pos = [0,0];
 var gh2pos = [0,0];
 var gh3pos = [0,0];
