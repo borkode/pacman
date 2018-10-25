@@ -163,3 +163,4 @@ setInterval(function(){
   }
 },1);
 // I have resorted to hard-coding the pellets, since .cloneNode() doesn't seem to work on <img> tags.
+// Note: there are 161 regular pellets and 4 mega pellets.
