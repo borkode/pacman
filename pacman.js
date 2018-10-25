@@ -166,11 +166,11 @@ var x = 0;
 while(x<basePellets.length){
   if(basePellets[x]=='1'){
   var cln = document.getElementById('pelletimgs').firstChild.cloneNode();
-    document.getElementById("pelletimgs").appendChild(cln);
- pelletEl.push(cln)
-    cln.style.position='absolute';
-    cln.style.left=retXY(x)[0];
-    cln.style.top=retXY(x)[1];
+    var cl = document.getElementById("pelletimgs").appendChild(cln);
+ pelletEl.push(cl)
+    cl.style.position='absolute';
+    cl.style.left=retXY(x)[0];
+    cl.style.top=retXY(x)[1];
   }
   x += 1
 }
