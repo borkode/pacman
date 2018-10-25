@@ -148,9 +148,9 @@ pelcount.innerHTML=pellets*10
 var pelletEl = [];
 // Okay, so what I want to do is basically replicate the hitbox function but instead of stopping the user, it adds 1 to the pellets variable
 setInterval(function(){
-  if(curPellets[retEl(pacpos[0],pacpos[1])]==1){
+  if(curPellets[retEl(pacpos[0],pacpos[1])]=='1'){
    pellets++
-    curPellets[retEl(pacpos[0],pacpos[1])] = 0;
+    curPellets[retEl(pacpos[0],pacpos[1])] = '0';
   }
 },1);
 
