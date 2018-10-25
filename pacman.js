@@ -165,4 +165,5 @@ while(x<basePellets.length){
   cln.setAttribute('id','pellet'+(x+1).toString())
  pelletEl.push(cln) 
   }
+  x += 1
 }
