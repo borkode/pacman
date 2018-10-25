@@ -157,7 +157,7 @@ setInterval(function(){
   }
 },1);
 var x = 0;
-while(x<basePellets.length;){
+while(x<basePellets.length){
   var itm = document.getElementById('pellet'+x.toString());
   var cln = itm.cloneNode(true);
     document.getElementById("pelletimgs").appendChild(cln);
