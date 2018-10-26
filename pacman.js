@@ -211,7 +211,9 @@ pman.style.top = pixel_size*15+8+'px';
 
   setInterval(function(){
   if(curPellets[retEl(pacpos[0],pacpos[1])]=='1' || curPellets[retEl(pacpos[0],pacpos[1])]=='2'){
+    if(curPellets[retEl(pacpos[0],pacpos[1])]=='1'){
    pellets++
+       }
     var btn = document.createElement("BUTTON");
     btn.style.width=pixel_size*0.75+'px';
     btn.style.height=pixel_size*0.75+'px';
