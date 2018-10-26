@@ -60,7 +60,7 @@ var playable = false;
 document.onkeydown = function (e) {
     switch (e.key) {
       case 'x':
-        audio.volume = '0.75'
+        susound.volume = '2.5'
        susound.play();
        setTimeout(function(){ 
          playable = true;
