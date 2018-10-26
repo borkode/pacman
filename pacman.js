@@ -168,9 +168,16 @@ while(x<basePellets.length){
   x += 1
 }
 }
+function nextLevel(){
+  alert("All pellets have been collected.");
+}
+
   setInterval(function(){
   if(curPellets[retEl(pacpos[0],pacpos[1])]=='1'){
    pellets++
+   if(pellets==161){
+   nextLevel()
+   }
     var btn = document.createElement("BUTTON");
     btn.style.width=pixel_size+'px';
     btn.style.height=pixel_size+'px';
