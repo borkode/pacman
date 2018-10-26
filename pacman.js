@@ -156,13 +156,6 @@ document.getElementById('pelletimgs').style.height=pixel_size+'px';
 var basepel= document.getElementById('pellet1');
 var pelletEl = [];
 // Okay, so what I want to do is basically replicate the hitbox function but instead of stopping the user, it adds 1 to the pellets variable
-setInterval(function(){
-  if(curPellets[retEl(pacpos[0],pacpos[1])]=='1'){
-   pellets++
-    curPellets[retEl(pacpos[0],pacpos[1])].style.visibility = 'hidden';
-    curPellets[retEl(pacpos[0],pacpos[1])] = '0';
-  }
-},1);
 window.onload = function(){
 var x = 0;
 while(x<basePellets.length){
@@ -174,6 +167,13 @@ while(x<basePellets.length){
 }
   x += 1
 }
+  setInterval(function(){
+  if(curPellets[retEl(pacpos[0],pacpos[1])]=='1'){
+   pellets++
+    curPellets[pelletEl(pacpos[0],pacpos[1])].style.visibility = 'hidden';
+    curPellets[retEl(pacpos[0],pacpos[1])] = '0';
+  }
+},1);
 }
 // I have resorted to hard-coding the pellets, since .cloneNode() doesn't seem to work on <img> tags.
 // Note: there are 161 regular pellets and 4 mega pellets.
