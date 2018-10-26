@@ -186,7 +186,7 @@ function nextLevel(){
     btn.style.position='absolute';
     btn.style.left=pacpos[0]*pixel_size+8+'px';
     btn.style.top=pacpos[1]*pixel_size+8+'px';
-    document.body.getElementById('pelcovers').appendChild(btn);
+    document.getElementById('pelcovers').appendChild(btn);
     curPellets[retEl(pacpos[0],pacpos[1])] = '0';
     if(pellets==161){
    nextLevel()
