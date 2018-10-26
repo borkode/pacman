@@ -169,15 +169,14 @@ while(x<basePellets.length){
 }
 }
 function nextLevel(){
+  pellets = 0
+  document.getElementById('pelcovers').innerHTML = ""
   alert("All pellets have been collected.");
 }
 
   setInterval(function(){
   if(curPellets[retEl(pacpos[0],pacpos[1])]=='1'){
    pellets++
-   if(pellets==161){
-   nextLevel()
-   }
     var btn = document.createElement("BUTTON");
     btn.style.width=pixel_size+'px';
     btn.style.height=pixel_size+'px';
@@ -187,7 +186,10 @@ function nextLevel(){
     btn.style.position='absolute';
     btn.style.left=pacpos[0]*pixel_size+8+'px';
     btn.style.top=pacpos[1]*pixel_size+8+'px';
-    document.body.appendChild(btn);
+    document.body.getElementById('pelcovers').appendChild(btn);
     curPellets[retEl(pacpos[0],pacpos[1])] = '0';
+    if(pellets==161){
+   nextLevel()
+   }
   }
 },1);
