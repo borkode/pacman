@@ -67,7 +67,9 @@ document.onkeydown = function (e) {
        setTimeout(function(){ 
          playable = true;
          audio.volume = '0.1'
+         setInterval(function(){
   audio.play();
+         },1);
          pdir = 0;
          document.getElementById('pacman').style.transform = 'rotate(0deg)'
          movex=1;
