@@ -172,20 +172,7 @@ pelcount.innerHTML=pellets*10+rescore
 document.getElementById('pelletimgs').style.width=pixel_size+'px';
 document.getElementById('pelletimgs').style.height=pixel_size+'px';
 var basepel= document.getElementById('pellet1');
-var pelletEl = [];
 // Okay, so what I want to do is basically replicate the hitbox function but instead of stopping the user, it adds 1 to the pellets variable
-window.onload = function(){
-var x = 0;
-while(x<basePellets.length){
-  if(basePellets[Number(x)]=='1'){
-  pelletEl.push(document.getElementById('pellet'+(Number(pelletEl.length)+1).toString()))
-  var newe = pelletEl[pelletEl.length-1]
-  newe.style.left = retXY(x)[0]*pixel_size+8+'px';
-  newe.style.top  = retXY(x)[1]*pixel_size+8+'px';
-}
-  x += 1
-}
-}
 function nextLevel(){
   setTimeout(function(){
   rescore += pellets*10
