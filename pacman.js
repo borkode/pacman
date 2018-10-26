@@ -219,8 +219,8 @@ pman.style.top = pixel_size*15+8+'px';
     btn.style.outline='none';
     btn.style.backgroundColor='#000022';
     btn.style.position='absolute';
-    btn.style.left=pacpos[0]*(pixel_size*0.125)+8+'px';
-    btn.style.top=pacpos[1]*(pixel_size*0.125)+8+'px';
+    btn.style.left=pacpos[0]*pixel_size+(pixel_size*0.125)+8+'px';
+    btn.style.top=pacpos[1]*pixel_size+(pixel_size*0.125)+8+'px';
     btn.style.zIndex=5
     document.getElementById('pelcovers').appendChild(btn);
     curPellets[retEl(pacpos[0],pacpos[1])] = '0';
