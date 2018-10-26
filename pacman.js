@@ -57,9 +57,6 @@ var pdir = 90;
 var wc = 0;
 var hc = 0;
 var playable = false;
-document.onkeydown = function (e) {
-    switch (e.key) {
-      case 'x':
         if(!playable){
         susound.volume = '1'
        susound.play();
@@ -69,8 +66,9 @@ document.onkeydown = function (e) {
   audio.play();
        },5000);
         }
-        break;
-        
+document.onkeydown = function (e) {
+    switch (e.key) {
+       
       case 'w':
         case 'ArrowUp':
         if(playable){
