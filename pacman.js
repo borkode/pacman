@@ -66,36 +66,43 @@ document.onkeydown = function (e) {
   audio.play();
        },5000);
         break;
-        if(playable){
+        
       case 'w':
         case 'ArrowUp':
+        if(playable){
             pdir = 270
             movex = 0
         movey = -1
         document.getElementById('pacman').style.transform = 'rotate(270deg)'
+        }
             break;
         case 's':
         case 'ArrowDown':
+        if(playable){
         movex = 0
         movey = 1
             pidir = 90
         document.getElementById('pacman').style.transform = 'rotate(90deg)'
+    }
             break;
         case 'a':
         case 'ArrowLeft':
+        if(playable){
         movex = -1
         movey = 0
             pdir = 180
         document.getElementById('pacman').style.transform = 'rotate(180deg)'
+        }
             break;
         case 'd':
         case 'ArrowRight':
+        if(playable){
         movex = 1
         movey = 0
             pdir = 0
         document.getElementById('pacman').style.transform = 'rotate(0deg)'
+    }
             break;
-        }
     }
 };
 audio.volume = '0.2'
