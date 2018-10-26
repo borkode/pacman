@@ -201,7 +201,7 @@ function nextLevel(){
   alert("All pellets have been collected.");
     var movex = 0;
 var movey = 0;
-var pacpos = [9,15];
+var pacpos = [9,14];
 pman.style.left = pixel_size*9+8+'px';
 pman.style.top = pixel_size*15+8+'px';
             pidir = 90
