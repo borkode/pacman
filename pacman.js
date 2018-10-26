@@ -159,7 +159,7 @@ var pelletEl = [];
 setInterval(function(){
   if(curPellets[retEl(pacpos[0],pacpos[1])]=='1'){
    pellets++
-    curPellets[retEl(pacpos[0],pacpos[1])].style.visiibility = 'hidden';
+    curPellets[retEl(pacpos[0],pacpos[1])].style.visibility = 'hidden';
     curPellets[retEl(pacpos[0],pacpos[1])] = '0';
   }
 },1);
