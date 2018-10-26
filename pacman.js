@@ -7,6 +7,7 @@ var gwid = 19;
 var ghei = 19;
 var pixel_size = 25;
 var pman = document.getElementById('pacman');
+pman.style.zIndex=20;
 var layout = [ // 0 = empty, 1 = solid
 /*
                                      1   1   1   1   1   1   1   1   1   1
@@ -186,6 +187,7 @@ function nextLevel(){
     btn.style.position='absolute';
     btn.style.left=pacpos[0]*pixel_size+8+'px';
     btn.style.top=pacpos[1]*pixel_size+8+'px';
+    btn.style.zIndex=5
     document.getElementById('pelcovers').appendChild(btn);
     curPellets[retEl(pacpos[0],pacpos[1])] = '0';
     if(pellets==161){
