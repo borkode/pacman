@@ -60,6 +60,7 @@ var playable = false;
 document.onkeydown = function (e) {
     switch (e.key) {
       case 'x':
+        if(!playable){
         susound.volume = '2.5'
        susound.play();
        setTimeout(function(){ 
@@ -67,6 +68,7 @@ document.onkeydown = function (e) {
          audio.volume = '0.2'
   audio.play();
        },5000);
+        }
         break;
         
       case 'w':
