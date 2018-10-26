@@ -222,6 +222,7 @@ pman.style.top = pixel_size*15+8+'px';
     btn.style.left=pacpos[0]*pixel_size+(pixel_size*0.125)+8+'px';
     btn.style.top=pacpos[1]*pixel_size+(pixel_size*0.125)+8+'px';
     btn.style.zIndex=5
+    btn.style.borderRadius = '100%'
     document.getElementById('pelcovers').appendChild(btn);
     curPellets[retEl(pacpos[0],pacpos[1])] = '0';
     if(pellets==161){
