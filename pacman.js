@@ -43,6 +43,7 @@ return pos
 
 document.getElementById('pacman').style.transform = 'rotate(270deg)'
 var audio = document.getElementById('movesfx')
+var susound = document.getElementById('susfx');
 var movex = 0;
 var movey = 0;
 var pacpos = [9,15];
@@ -55,8 +56,17 @@ var gh4pos = [0,0];
 var pdir = 90;
 var wc = 0;
 var hc = 0;
+var playable = false;
 document.onkeydown = function (e) {
     switch (e.key) {
+      case 'x':
+       susound.play();
+       setTimeout(function(){ 
+         playable = true;
+  audio.play();
+       },5000);
+        break;
+        if(playable){
       case 'w':
         case 'ArrowUp':
             pdir = 270
@@ -85,6 +95,7 @@ document.onkeydown = function (e) {
             pdir = 0
         document.getElementById('pacman').style.transform = 'rotate(0deg)'
             break;
+        }
     }
 };
 audio.volume = '0.2'
@@ -98,7 +109,6 @@ l.setAttribute('width',pixel_size*gwid);
 l.setAttribute('height',pixel_size*ghei);
 
 function move(m){
-  audio.play();
   if(layout[retEl(pacpos[0]+movex,pacpos[1]+movey)]!=1){
 pman.style.left = pman.getBoundingClientRect().left+pixel_size*movex*m+'px';
 pman.style.top = pman.getBoundingClientRect().top +pixel_size*movey*m+'px';
