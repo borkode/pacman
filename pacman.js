@@ -57,7 +57,10 @@ var pdir = 90;
 var wc = 0;
 var hc = 0;
 var playable = false;
-        if(!playable){
+        
+document.onkeydown = function (e) {
+    switch (e.key) {
+       if(!playable){
         susound.volume = '1'
        susound.play();
        setTimeout(function(){ 
@@ -66,9 +69,6 @@ var playable = false;
   audio.play();
        },5000);
         }
-document.onkeydown = function (e) {
-    switch (e.key) {
-       
       case 'w':
         case 'ArrowUp':
         if(playable){
