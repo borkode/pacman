@@ -61,11 +61,11 @@ document.onkeydown = function (e) {
     switch (e.key) {
       case 'x':
         if(!playable){
-        susound.volume = '2.5'
+        susound.volume = '1'
        susound.play();
        setTimeout(function(){ 
          playable = true;
-         audio.volume = '0.2'
+         audio.volume = '0.1'
   audio.play();
        },5000);
         }
