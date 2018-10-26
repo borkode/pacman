@@ -48,7 +48,6 @@ var movey = 0;
 var pacpos = [9,15];
 pman.style.left = pixel_size*9+8+'px';
 pman.style.top = pixel_size*15+8+'px';
-pman.style.zIndex='5';
 var gh1pos = [0,0];
 var gh2pos = [0,0];
 var gh3pos = [0,0];
@@ -171,14 +170,20 @@ while(x<basePellets.length){
 }
 }
 function nextLevel(){
-  movex = 0;
-  movey = 0;
   setTimeout(function(){
   rescore += pellets*10
   pellets = 0
-  document.getElementById('pelcovers').innerHTML = ""
+  document.getElementById('pelcovers').innerHTML = "";
+  curPellets = basePellets;
   alert("All pellets have been collected.");
-  },1000);
+    var movex = 0;
+var movey = 0;
+var pacpos = [9,15];
+pman.style.left = pixel_size*9+8+'px';
+pman.style.top = pixel_size*15+8+'px';
+            pidir = 90
+        document.getElementById('pacman').style.transform = 'rotate(90deg)'
+  },5);
 }
 
   setInterval(function(){
