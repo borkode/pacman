@@ -148,9 +148,10 @@ var basePellets = [ // 0 = empty, 1 = pellet, 2 = mega pellet
 ]
 var curPellets = basePellets
 var pellets = 0;
+var rescore = 0;
 var pelcount = document.getElementById('pellets');
 setInterval(function(){
-pelcount.innerHTML=pellets*10
+pelcount.innerHTML=pellets*10+rescore
 },1);
 document.getElementById('pelletimgs').style.width=pixel_size+'px';
 document.getElementById('pelletimgs').style.height=pixel_size+'px';
@@ -170,9 +171,14 @@ while(x<basePellets.length){
 }
 }
 function nextLevel(){
+  movex = 0;
+  movey = 0;
+  setTimeout(function(){
+  rescore += pellets*10
   pellets = 0
   document.getElementById('pelcovers').innerHTML = ""
   alert("All pellets have been collected.");
+  },1000);
 }
 
   setInterval(function(){
