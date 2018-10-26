@@ -178,8 +178,8 @@ while(x<basePellets.length){
     btn.style.outline='none';
     btn.style.backgroundColor='red';
     btn.style.position='absolute';
-    btn.style.left=pacpos[0];
-    btn.style.top=pacpos[1];
+    btn.style.left=pacpos[0]*pixel_size+'px';
+    btn.style.top=pacpos[1]*pixel_size+'px';
     document.body.appendChild(btn);
     curPellets[retEl(pacpos[0],pacpos[1])] = '0';
   }
