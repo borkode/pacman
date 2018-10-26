@@ -60,9 +60,11 @@ var playable = false;
 document.onkeydown = function (e) {
     switch (e.key) {
       case 'x':
+        audio.volume = '0.75'
        susound.play();
        setTimeout(function(){ 
          playable = true;
+         audio.volume = '0.2'
   audio.play();
        },5000);
         break;
@@ -105,7 +107,7 @@ document.onkeydown = function (e) {
             break;
     }
 };
-audio.volume = '0.2'
+
 document.getElementById('pacman').setAttribute('src','http://borkode.github.io/pacman/pacman-move.gif');
 document.getElementById('pacman').style.width=pixel_size+'px';
 document.getElementById('pacman').style.height=pixel_size+'px';
