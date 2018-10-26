@@ -167,6 +167,7 @@ while(x<basePellets.length){
 }
   x += 1
 }
+}
   setInterval(function(){
   if(curPellets[retEl(pacpos[0],pacpos[1])]=='1'){
    pellets++
@@ -174,6 +175,3 @@ while(x<basePellets.length){
     curPellets[retEl(pacpos[0],pacpos[1])] = '0';
   }
 },1);
-}
-// I have resorted to hard-coding the pellets, since .cloneNode() doesn't seem to work on <img> tags.
-// Note: there are 161 regular pellets and 4 mega pellets.
