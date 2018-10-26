@@ -171,8 +171,16 @@ while(x<basePellets.length){
   setInterval(function(){
   if(curPellets[retEl(pacpos[0],pacpos[1])]=='1'){
    pellets++
-    var pel = pelletEl[retEl(pacpos[0],pacpos[1])-1]
-    pel.style.visibility = 'hidden';
+    var btn = document.createElement("BUTTON");
+    btn.style.width=pixel_size+'px';
+    btn.style.height=pixel_size+'px';
+    btn.style.border = 'none';
+    btn.style.outline='none';
+    btn.style.backgroundColor='red';
+    btn.style.position='absolute';
+    btn.style.left=pacpos[0];
+    btn.style.top=pacpos[1];
+    document.body.appendChild(btn);
     curPellets[retEl(pacpos[0],pacpos[1])] = '0';
   }
 },1);
