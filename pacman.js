@@ -171,7 +171,8 @@ while(x<basePellets.length){
   setInterval(function(){
   if(curPellets[retEl(pacpos[0],pacpos[1])]=='1'){
    pellets++
-    pelletEl[pelletEl(pacpos[0],pacpos[1])].style.visibility = 'hidden';
+    var pel = pelletEl[retEl(pacpos[0],pacpos[1])]
+    pel.style.visibility = 'hidden';
     curPellets[retEl(pacpos[0],pacpos[1])] = '0';
   }
 },1);
