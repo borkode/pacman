@@ -60,6 +60,7 @@ var playable = false;
         
 document.onkeydown = function (e) {
     switch (e.key) {
+      case 'x':
        if(!playable){
         susound.volume = '1'
        susound.play();
@@ -68,7 +69,9 @@ document.onkeydown = function (e) {
          audio.volume = '0.1'
   audio.play();
        },5000);
-        }
+        
+       }
+        break;
       case 'w':
         case 'ArrowUp':
         if(playable){
