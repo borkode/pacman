@@ -68,6 +68,10 @@ document.onkeydown = function (e) {
          playable = true;
          audio.volume = '0.1'
   audio.play();
+         pdir = 0;
+         document.getElementById('pacman').style.transform = 'rotate(0deg)'
+         movex=1;
+         movey=0;
        },5000);
         
        }
