@@ -188,12 +188,11 @@ function nextLevel(){
   setTimeout(function(){
   rescore += pellets*10
   pellets = 0
-  alert("All pellets have been collected.");
     var movex = 0;
 var movey = 0;
 var pacpos = [9,15];
 pman.style.left = pixel_size*9+8+'px';
-pman.style.top = pixel_size*15+8+'px';
+pman.style.top = pixel_size*14+8+'px';
             pidir = 90
         document.getElementById('pacman').style.transform = 'rotate(90deg)'
       curPellets = [ // 0 = empty, 1 = pellet, 2 = mega pellet
