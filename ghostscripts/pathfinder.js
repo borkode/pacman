@@ -25,7 +25,7 @@ var grid = [
 var easystar = new EasyStar.js();
 easystar.setGrid(grid);
 easystar.setAcceptableTiles([0]);
-easystar.findPath(0, 0, 4, 0, function(path) {
+easystar.findPath(1, 1, 4, 1, function(path) {
 	if (path === null) {
 		alert("Path was not found.");
 	} else {
