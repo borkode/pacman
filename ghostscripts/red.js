@@ -5,11 +5,7 @@ var r = '/pacman/ghost_0.png'
 var ghosts_el = document.getElementById('redghost')
 ghosts_el.setAttribute('src',l);
 
-setInterval(function(){
-document.getElementById('redghost').style.postition = 'absolute';
-	document.getElementById('redghost').style.left=pathc[0]*pixel_size+8
-	document.getElementById('redghost').style.top=pathc[1]*pixel_size+8
-},250);
+
 setInterval(function(){
 	var posx = (document.getElementById('redghost').getBoundingClientRect().left-8)/pixel_size
 	var posy = (document.getElementById('redghost').getBoundingClientRect().left-8)/pixel_size
@@ -29,3 +25,9 @@ var x=0;
 });
 	easystar.calculate();	
 },1);
+
+setInterval(function(){
+document.getElementById('redghost').style.postition = 'absolute';
+	document.getElementById('redghost').style.left=pathc[0]*pixel_size+8
+	document.getElementById('redghost').style.top=pathc[1]*pixel_size+8
+},250);
