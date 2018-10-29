@@ -4,15 +4,11 @@ var l = '/pacman/ghost_1.png'
 var r = '/pacman/ghost_0.png'
 var ghosts_el = document.getElementById('redghost')
 ghosts_el.setAttribute('src',l);
-
-
-
-  
-
+var pathe = [];
 setInterval(function(){
 document.getElementById('redghost').style.postition = 'absolute';
 var posx = (document.getElementById('redghost').getBoundingClientRect().left-8)/pixel_size;var posy = (document.getElementById('redghost').getBoundingClientRect().left-8)/pixel_size;var tox=pacpos[0];var toy=pacpos[1];
-var pathc=easystar.findPath(posx, posy, tox, toy, function(path) {if (path != null) {var x=0;var pathc = [];pathc.push(path[1].x);pathc.push(path[1].y);}else{pathc= [posx,posy];};return pathc;});
+pathe=easystar.findPath(posx, posy, tox, toy, function(path) {if (path != null) {var x=0;var pathc = [];pathc.push(path[1].x);pathc.push(path[1].y);}else{pathc= [posx,posy];};return pathc;});
 	easystar.calculate();
-	document.getElementById('redghost').style.left=pathc[0]*pixel_size+8;document.getElementById('redghost').style.top=pathc[1]*pixel_size+8;
+	document.getElementById('redghost').style.left=pathe[0]*pixel_size+8;document.getElementById('redghost').style.top=pathe[1]*pixel_size+8;
 },250);
