@@ -25,24 +25,4 @@ var grid = [
 var easystar = new EasyStar.js();
 easystar.setGrid(grid);
 easystar.setAcceptableTiles([0]);
-easystar.findPath(2, 1, 4, 4, function(path) {
-	alert(path);
-	if (path === null) {
-		alert("Path was not found.");
-	} else {
-		alert("Path was found. The first Point is " + path[0].x + " " + path[0].y);
-var x=0;
-		var pathx = [];
-		var pathy = [];
-		while(x<path.length){
-			pathx.push(path[x].x);
-			pathy.push(path[x].y);
-			x += 1;
-		}
-	}
-	alert(pathx)
-	alert(pathy)
-});
-setInterval(function(){
-	easystar.calculate();	
-},100);
+
