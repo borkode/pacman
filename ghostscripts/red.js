@@ -6,13 +6,13 @@ var ghosts_el = document.getElementById('redghost')
 ghosts_el.setAttribute('src',l);
 
 setInterval(function(){
-ghosts_el.style.postition = 'absolute';
-	ghosts_el.style.left=pathc[0]+8*pixel_size
-	ghosts_el.style.top=pathc[1]+8*pixel_size
+document.getElementById('redghost').style.postition = 'absolute';
+	document.getElementById('redghost').style.left=pathc[0]+8*pixel_size
+	document.getElementById('redghost').style.top=pathc[1]+8*pixel_size
 },250);
 setInterval(function(){
-	var posx = (ghosts_el.style.left-8)/pixel_size
-	var posy = (ghosts_el.style.left-8)/pixel_size
+	var posx = (ghosts_el.getBoundingClientRect().left-8)/pixel_size
+	var posy = (ghosts_el.getBoundingClientRect().left-8)/pixel_size
 	var tox=pacpos[0]
 	var toy=pacpos[1]
   easystar.findPath(posx, posy, tox, toy, function(path) {
