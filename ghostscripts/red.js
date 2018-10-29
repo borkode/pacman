@@ -7,8 +7,8 @@ ghosts_el.setAttribute('src',l);
 
 setInterval(function(){
 document.getElementById('redghost').style.postition = 'absolute';
-	document.getElementById('redghost').style.left=pathc[0]+8*pixel_size
-	document.getElementById('redghost').style.top=pathc[1]+8*pixel_size
+	document.getElementById('redghost').style.left=pathc[0]*pixel_size+8
+	document.getElementById('redghost').style.top=pathc[1]*pixel_size+8
 },250);
 setInterval(function(){
 	var posx = (document.getElementById('redghost').getBoundingClientRect().left-8)/pixel_size
@@ -16,7 +16,6 @@ setInterval(function(){
 	var tox=pacpos[0]
 	var toy=pacpos[1]
   easystar.findPath(posx, posy, tox, toy, function(path) {
-	alert(path);
 	if (path != null) {
 var x=0;
 		var pathc = [];
