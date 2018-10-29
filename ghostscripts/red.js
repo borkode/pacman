@@ -11,8 +11,8 @@ document.getElementById('redghost').style.postition = 'absolute';
 	document.getElementById('redghost').style.top=pathc[1]+8*pixel_size
 },250);
 setInterval(function(){
-	var posx = (ghosts_el.getBoundingClientRect().left-8)/pixel_size
-	var posy = (ghosts_el.getBoundingClientRect().left-8)/pixel_size
+	var posx = (document.getElementById('redghost').getBoundingClientRect().left-8)/pixel_size
+	var posy = (document.getElementById('redghost').getBoundingClientRect().left-8)/pixel_size
 	var tox=pacpos[0]
 	var toy=pacpos[1]
   easystar.findPath(posx, posy, tox, toy, function(path) {
