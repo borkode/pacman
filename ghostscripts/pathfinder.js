@@ -34,3 +34,6 @@ easystar.findPath(2, 1, 5, 4, function(path) {
 alert(path.length+", "+path.x+","+path.y);
 	}
 });
+setInterval(function(){
+	easystar.calculate();	
+},100);
