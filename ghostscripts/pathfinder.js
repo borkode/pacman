@@ -31,8 +31,17 @@ easystar.findPath(2, 1, 4, 4, function(path) {
 		alert("Path was not found.");
 	} else {
 		alert("Path was found. The first Point is " + path[0].x + " " + path[0].y);
-alert(path.length+", "+path.x+","+path.y);
+var x=0;
+		var pathx = [];
+		var pathy = [];
+		while(x<path.length){
+			pathx.push(path[x].x);
+			pathy.push(path[x].y);
+			x += 1;
+		}
 	}
+	alert(pathx)
+	alert(pathy)
 });
 setInterval(function(){
 	easystar.calculate();	
