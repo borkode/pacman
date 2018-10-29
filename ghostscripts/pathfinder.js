@@ -31,5 +31,5 @@ easystar.findPath(1, 1, 4, 1, function(path) {
 	} else {
 		alert("Path was found. The first Point is " + path[0].x + " " + path[0].y);
 	}
-});
 alert(path);
+});
